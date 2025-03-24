@@ -75,7 +75,7 @@ const Home = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link to="/take-quiz" className="flex-1 sm:flex-none">
+                <Link to="/quiz-stepper" className="flex-1 sm:flex-none">
                   <button className={`w-full px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r ${gradients[currentGradient]} rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] relative overflow-hidden group`}>
                     <span className="relative z-10 flex items-center justify-center">
                       Start Quiz Now

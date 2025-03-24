@@ -3,17 +3,19 @@ package com.example.backend.service;
 import com.example.backend.model.Question;
 import com.example.backend.repository.QuestionRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
-import java.awt.print.Pageable;
+import org.springframework.data.domain.Pageable;
 import java.util.List;
 import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
 public class QuestionService implements IQuestionService{
+
 
     private final QuestionRepository questionRepository;
 
@@ -57,7 +59,7 @@ public class QuestionService implements IQuestionService{
     }
     @Override
     public List<Question> getQuestionsForUser(Integer numOfQuestions, String subject) {
-        Pageable pageable = PageRequest.of(0, numOfQuestions);
+        Pageable pageable = (Pageable) PageRequest.of(0, numOfQuestions);
         return questionRepository.findBySubject(subject, pageable).getContent();
     }
 }

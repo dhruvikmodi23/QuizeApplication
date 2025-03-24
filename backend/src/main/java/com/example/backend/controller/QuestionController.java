@@ -4,6 +4,7 @@ import com.example.backend.model.Question;
 import com.example.backend.service.IQuestionService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,6 +21,7 @@ import static org.springframework.http.HttpStatus.CREATED;
 @RequestMapping("/api/quizzes")
 @RequiredArgsConstructor
 public class QuestionController {
+
     private final IQuestionService questionService;
 
     @PostMapping("/create-new-question")

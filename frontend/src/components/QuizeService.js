@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Base API Configuration
 export const api = axios.create({
-  baseURL: "http://localhost:9192/api/quizzes",
+  baseURL: "http://localhost:8081/api/quizzes",
   headers: {
     "Content-Type": "application/json",
   },
