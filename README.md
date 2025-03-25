@@ -117,7 +117,10 @@ npm install
 cp .env.example .env
 
 # Start development server
+```bash
 npm run dev
+```
+```
 🌐 API Reference
 Endpoint	Method	Description
 /api/auth/**	POST	Authentication endpoints
@@ -127,6 +130,7 @@ Endpoint	Method	Description
 /api/questions/search	GET	Search questions
 /api/quizzes/generate	POST	Generate new quiz
 /api/results	POST	Submit quiz results
+```
 
 🔮 Future Roadmap
 🎯 User Authentication (OAuth2 integration)
